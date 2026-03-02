@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
 
 export const useMetrics = () => {
   const [factory, setFactory] = useState(null);
